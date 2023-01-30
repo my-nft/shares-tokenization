@@ -1,0 +1,155 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_restrictionCode",
+						"type": "uint8"
+					}
+				],
+				"name": "canReturnTransferRestrictionCode",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "detectTransferRestriction",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_restrictionCode",
+						"type": "uint8"
+					}
+				],
+				"name": "messageForTransferRestriction",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "validateTransfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isValid",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"canReturnTransferRestrictionCode(uint8)": {
+					"details": "Returns true if the restriction code exists, and false otherwise."
+				},
+				"detectTransferRestriction(address,address,uint256)": {
+					"details": "See ERC-1404"
+				},
+				"messageForTransferRestriction(uint8)": {
+					"details": "See ERC-1404"
+				},
+				"validateTransfer(address,address,uint256)": {
+					"details": "Returns true if the transfer is valid, and false otherwise."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"CMTAT-flat.sol": "IRule"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"CMTAT-flat.sol": {
+			"keccak256": "0x4d56795ca3fb5aaf72d75053f8334a3356cab46b151d1dfa6faca3e1a6a58dd2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fbee5576069c6ce1393f0dcb7d5ddc65a8d37465b8d46dc400a53b05c7289f55",
+				"dweb:/ipfs/QmVPEDCihtUM9a2jms8zWnfV42YPKHAJFWvXBHLZkEicpP"
+			]
+		}
+	},
+	"version": 1
+}

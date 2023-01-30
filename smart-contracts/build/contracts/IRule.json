@@ -1,0 +1,311 @@
+{
+  "contractName": "IRule",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "detectTransferRestriction",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_restrictionCode",
+          "type": "uint8"
+        }
+      ],
+      "name": "messageForTransferRestriction",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "validateTransfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValid",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_restrictionCode",
+          "type": "uint8"
+        }
+      ],
+      "name": "canReturnTransferRestrictionCode",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_restrictionCode\",\"type\":\"uint8\"}],\"name\":\"canReturnTransferRestrictionCode\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"detectTransferRestriction\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_restrictionCode\",\"type\":\"uint8\"}],\"name\":\"messageForTransferRestriction\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"validateTransfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValid\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"canReturnTransferRestrictionCode(uint8)\":{\"details\":\"Returns true if the restriction code exists, and false otherwise.\"},\"detectTransferRestriction(address,address,uint256)\":{\"details\":\"See ERC-1404\"},\"messageForTransferRestriction(uint8)\":{\"details\":\"See ERC-1404\"},\"validateTransfer(address,address,uint256)\":{\"details\":\"Returns true if the transfer is valid, and false otherwise.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IRule.sol\":\"IRule\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC1404.sol\":{\"keccak256\":\"0xecce8893e606fe62b4f78229a1e22b3b478bf528ba024350ad05438b1b1e9da2\",\"license\":\"MPL-2.0\",\"urls\":[\"bzz-raw://b087f9e24c469478d47dd31e585a6fe414b66ace5c0089b14dc7d26600afd1fa\",\"dweb:/ipfs/QmXyqGPdjSU7XgNdkuqt36nMRd4shQnFjFXcGJDufznKMM\"]},\"project:/contracts/interfaces/IERC1404Wrapper.sol\":{\"keccak256\":\"0x09837917b4deec5fe7f76ae18836eba00f7e8083d2392768df30a3c681337013\",\"license\":\"MPL-2.0\",\"urls\":[\"bzz-raw://6c8f69cddcf03641e75b0c403897dfd49cb5ae0bd7ab7088781bcc72c8a5d32f\",\"dweb:/ipfs/QmUDDexk245KiM25aUGVuTMaLHMr531wANN8UPQqnQXFjV\"]},\"project:/contracts/interfaces/IRule.sol\":{\"keccak256\":\"0xb46279d62415804832cad7a41edb0640ae54ff6e2ec91d2b3b11d0dd1b17de9a\",\"license\":\"MPL-2.0\",\"urls\":[\"bzz-raw://cf158f8609a7364e4ada732162efe98ad35cc649ff08ce02edf3da8d85e7761e\",\"dweb:/ipfs/QmPb4dZBET4yv46G9AC6yyEFbAFcAWjAEjcxsbqJE7tY2Z\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "//SPDX-License-Identifier: MPL-2.0\n\npragma solidity ^0.8.17;\n\n\nimport \"./IERC1404Wrapper.sol\";\n\n\ninterface IRule is IERC1404Wrapper {\n     /**\n     * @dev Returns true if the restriction code exists, and false otherwise.\n     */\n     function canReturnTransferRestrictionCode(uint8 _restrictionCode)\n        external\n        view\n        returns (bool);\n}\n",
+  "sourcePath": "/Users/zakaryachami/working/prestation/fiverr/rogerdepallens/2023/sharesTokenization/CMTAT/contracts/interfaces/IRule.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IRule.sol",
+    "exportedSymbols": {
+      "IERC1404": [
+        363
+      ],
+      "IERC1404Wrapper": [
+        381
+      ],
+      "IRule": [
+        395
+      ]
+    },
+    "id": 396,
+    "license": "MPL-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 383,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:24:3"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IERC1404Wrapper.sol",
+        "file": "./IERC1404Wrapper.sol",
+        "id": 384,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 396,
+        "sourceUnit": 382,
+        "src": "63:31:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 385,
+              "name": "IERC1404Wrapper",
+              "nameLocations": [
+                "116:15:3"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 381,
+              "src": "116:15:3"
+            },
+            "id": 386,
+            "nodeType": "InheritanceSpecifier",
+            "src": "116:15:3"
+          }
+        ],
+        "canonicalName": "IRule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 395,
+        "linearizedBaseContracts": [
+          395,
+          381,
+          363
+        ],
+        "name": "IRule",
+        "nameLocation": "107:5:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 387,
+              "nodeType": "StructuredDocumentation",
+              "src": "139:89:3",
+              "text": " @dev Returns true if the restriction code exists, and false otherwise."
+            },
+            "functionSelector": "7d045df6",
+            "id": 394,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canReturnTransferRestrictionCode",
+            "nameLocation": "243:32:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 390,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 389,
+                  "mutability": "mutable",
+                  "name": "_restrictionCode",
+                  "nameLocation": "282:16:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 394,
+                  "src": "276:22:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 388,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "276:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "275:24:3"
+            },
+            "returnParameters": {
+              "id": 393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 394,
+                  "src": "347:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 391,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "347:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "346:6:3"
+            },
+            "scope": 395,
+            "src": "234:119:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 396,
+        "src": "97:258:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "36:320:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.10",
+  "updatedAt": "2023-01-12T18:12:27.784Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "canReturnTransferRestrictionCode(uint8)": {
+        "details": "Returns true if the restriction code exists, and false otherwise."
+      },
+      "detectTransferRestriction(address,address,uint256)": {
+        "details": "See ERC-1404"
+      },
+      "messageForTransferRestriction(uint8)": {
+        "details": "See ERC-1404"
+      },
+      "validateTransfer(address,address,uint256)": {
+        "details": "Returns true if the transfer is valid, and false otherwise."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
