@@ -1,0 +1,58 @@
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+.token-contract1 {
+  position: relative;
+  font-weight: 600;
+}
+.tokencontract1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.not-connected {
+  position: relative;
+  font-size: var(--font-size-3xs);
+  font-weight: 200;
+  color: var(--color-blueviolet);
+}
+.menuslider {
+  position: relative;
+  background-color: var(--color-whitesmoke);
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-6xs);
+  box-sizing: border-box;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+  opacity: 0;
+  height: 100%;
+  max-width: 90%;
+  overflow: auto;
+  text-align: right;
+  font-size: var(--font-size-xs);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.menuslider.animate {
+  animation: 0.25s ease 0s 1 normal forwards slide-in-right;
+}
+@media screen and (max-width: 420px) {
+  .tokencontract1 {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

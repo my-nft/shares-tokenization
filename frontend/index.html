@@ -41,15 +41,15 @@
           </div>
           <div class="connected-address-parent">
             <div class="connected-address2">Connected Address</div>
-            <div class="x4914392" id="selected-account">Not Connected</div>
+            <div class="x4914392">Not Connected</div>
           </div>
-
+          
         </div>
         <button class="icround-menu" id="icroundMenu">
           <img class="vector-icon" alt="" src="public/vector.svg" />
         </button>
       </header>
-
+  
       <div id="menuSlider" class="popup-overlay" style="display: none">
         <div class="menuslider" data-animate-on-scroll>
           <div class="tokencontract1">
@@ -58,7 +58,7 @@
           </div>
           <div class="tokencontract1">
             <div class="token-contract1">Connected Address</div>
-            <div class="not-connected" id="selected-account">Not Connected</div>
+            <div class="not-connected">Not Connected</div>
           </div>
         </div>
       </div>
@@ -258,11 +258,11 @@
           threshold: 0.15,
         }
       );
-
+      
       for (let i = 0; i < scrollAnimElements.length; i++) {
         observer.observe(scrollAnimElements[i]);
       }
-
+      
       var icroundMenu = document.getElementById("icroundMenu");
       if (icroundMenu) {
         icroundMenu.addEventListener("click", function () {
@@ -277,7 +277,7 @@
             drawerOverlayStyle.justifyContent = "";
           }
           drawerOverlay.setAttribute("closable", "");
-
+      
           var onClick =
             drawerOverlay.onClick ||
             function (e) {
