@@ -3770,6 +3770,8 @@ contract CMTAT is
 {
     /// @custom:oz-upgrades-unsafe-allow constructor
     uint public totalHolders;
+    address public escrow;
+    address public vesting;
     using SafeMath for uint;
     constructor(address forwarder, bool deployedWithProxy_, address owner, string memory name, string memory symbol, string memory tokenId, string memory terms
     ) MetaTxModule(forwarder) {
@@ -3783,6 +3785,16 @@ contract CMTAT is
             // Disable the possibility to initialize the implementation
             _disableInitializers();
          }
+    }
+
+    function setVesting(address _vesting) public {
+        require(hasRole(DEFAULT_ADMIN_ROLE, msg.sender) , "only admin");
+        vesting = _vesting;
+    }
+
+    function setEscrow(address _escrow) public {
+        require(hasRole(DEFAULT_ADMIN_ROLE, msg.sender) , "only admin");
+        escrow = _escrow;
     }
 
     function initialize(
@@ -3882,10 +3894,10 @@ contract CMTAT is
     ) internal override(SnapshotModuleInternal, ERC20Upgradeable) {
         require(!paused(), "CMTAT: token transfer while paused");
         require(!frozen(from), "CMTAT: token transfer while frozen");
-        if(balanceOf(to) == 0){
+        if(balanceOf(to) == 0 && to != escrow && to != vesting){
             totalHolders = totalHolders.add(1);
         }
-        if(balanceOf(from) == amount){
+        if(balanceOf(from) == amount && to != escrow && to != vesting){
             totalHolders = totalHolders.sub(1);
         }
         SnapshotModuleInternal._beforeTokenTransfer(from, to, amount);

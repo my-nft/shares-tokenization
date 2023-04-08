@@ -1978,9 +1978,11 @@ contract TokenVesting is Ownable, ReentrancyGuard{
     */
     function computeReleasableAmount(bytes32 vestingScheduleId)
         public
-        onlyIfVestingScheduleNotRevoked(vestingScheduleId)
         view
         returns(uint256){
+        if(vestingSchedules[vestingScheduleId].initialized == false || vestingSchedules[vestingScheduleId].revoked == true){
+            return 0;
+        }
         VestingSchedule storage vestingSchedule = vestingSchedules[vestingScheduleId];
         return _computeReleasableAmount(vestingSchedule);
     }
